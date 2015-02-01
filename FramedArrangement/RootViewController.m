@@ -42,6 +42,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) layoutSquares {
+    int sqW = self.view.frame.size.width / 2;
+    int sqH = self.view.frame.size.height / 2;
+    CGRect boxframeTopLeft = CGRectMake(0, 0, sqW, sqH);
+    CGRect boxframeTopRight = CGRectMake(sqW, 0, sqW, sqH);
+    CGRect boxframeBottomLeft = CGRectMake(0, sqH, sqW, sqH);
+    CGRect boxframeBottomRight = CGRectMake(sqW, sqH, sqW, sqH);
+    
+    self.re
+}
+
+
 /*
 #pragma mark - Navigation
 

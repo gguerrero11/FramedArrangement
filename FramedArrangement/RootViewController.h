@@ -18,4 +18,7 @@
 @property (nonatomic) UIView *blueView;
 @property (nonatomic) UIView *yellowView;
 
+- (void) layoutSquares;
+
+
 @end
