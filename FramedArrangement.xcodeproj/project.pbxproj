@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490D2ED81A7E01310090B0F5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D2ED71A7E01310090B0F5 /* RootViewController.m */; };
 		4F9CBA341A4A1DF60029E2F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9CBA331A4A1DF60029E2F7 /* main.m */; };
 		4F9CBA371A4A1DF60029E2F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9CBA361A4A1DF60029E2F7 /* AppDelegate.m */; };
 		4F9CBA3F1A4A1DF60029E2F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9CBA3E1A4A1DF60029E2F7 /* Images.xcassets */; };
@@ -25,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		490D2ED61A7E01310090B0F5 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		490D2ED71A7E01310090B0F5 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		4F9CBA2E1A4A1DF60029E2F7 /* FramedArrangement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FramedArrangement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9CBA321A4A1DF60029E2F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F9CBA331A4A1DF60029E2F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 			children = (
 				4F9CBA351A4A1DF60029E2F7 /* AppDelegate.h */,
 				4F9CBA361A4A1DF60029E2F7 /* AppDelegate.m */,
+				490D2ED61A7E01310090B0F5 /* RootViewController.h */,
+				490D2ED71A7E01310090B0F5 /* RootViewController.m */,
 				4F9CBA3E1A4A1DF60029E2F7 /* Images.xcassets */,
 				4F9CBA401A4A1DF60029E2F7 /* LaunchScreen.xib */,
 				4F9CBA311A4A1DF60029E2F7 /* Supporting Files */,
@@ -212,6 +217,7 @@
 			files = (
 				4F9CBA371A4A1DF60029E2F7 /* AppDelegate.m in Sources */,
 				4F9CBA341A4A1DF60029E2F7 /* main.m in Sources */,
+				490D2ED81A7E01310090B0F5 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
