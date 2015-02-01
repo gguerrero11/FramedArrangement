@@ -21,6 +21,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Set a new instance of the view controller to the root view controller of the window
     RootViewController *viewController = [[RootViewController alloc] init];
+    self.window.rootViewController = viewController; // <--- "setting it"
+    // [self.window setRootViewController:viewController];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
