@@ -16,7 +16,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // Add each view to the view controller's main view in the view did load method:
+    self.redView = [UIView new];
+    self.redView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:self.redView];
+    
+    self.greenView = [UIView new];
+    self.greenView.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:self.greenView];
+    
+    self.blueView = [UIView new];
+    self.blueView.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:self.blueView];
+    
+    self.yellowView = [UIView new];
+    self.yellowView.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:self.yellowView];
+
+
 }
 
 - (void)didReceiveMemoryWarning {
