@@ -50,7 +50,7 @@
     CGRect boxframeBottomLeft = CGRectMake(0, sqH, sqW, sqH);
     CGRect boxframeBottomRight = CGRectMake(sqW, sqH, sqW, sqH);
     
-    self.re
+    
 }
 
 
