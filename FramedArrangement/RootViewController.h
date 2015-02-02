@@ -27,4 +27,7 @@
 // Add a method called layoutVerticalRectangles
 - (void) layoutVerticalRectangles;
 
+// Add a method called layoutDiagonalSquares
+- (void) layoutDiagonalSquares;
+
 @end

@@ -8,7 +8,7 @@
 
 #import "RootViewController.h"
 
-@interface RootViewController ()
+@CGFloaterface RootViewController ()
 
 @end
 
@@ -46,8 +46,8 @@
 // Calculate the width and height of the squares, the x of the second column and y of the second row
 // 4 squares like a checkerboard
 - (void) layoutSquares {
-    int sqW = self.view.frame.size.width / 2;
-    int sqH = self.view.frame.size.height / 2;
+    CGFloat sqW = self.view.frame.size.width / 2;
+    CGFloat sqH = self.view.frame.size.height / 2;
     CGRect checkerframeTopLeft = CGRectMake(0, 0, sqW, sqH);
     CGRect checkerframeTopRight = CGRectMake(sqW, 0, sqW, sqH);
     CGRect checkerframeBottomLeft = CGRectMake(0, sqH, sqW, sqH);
@@ -59,8 +59,8 @@
 // (4 flat horizontal rectangles stacked)
 - (void) layoutHorizontalRectangles {
 
-    int rectHeight = self.view.frame.size.height / 4;
-    int rectWidth = self.view.frame.size.width;
+    CGFloat rectHeight = self.view.frame.size.height / 4;
+    CGFloat rectWidth = self.view.frame.size.width;
     
     CGRect frameTop1 = CGRectMake(0, 0, rectWidth, rectHeight);
     CGRect frameTop2 = CGRectMake(0, rectHeight, rectWidth, rectHeight);
@@ -75,14 +75,21 @@
 // (4 tall vertical rectangles)
 - (void) layoutVerticalRectangles {
     
-    int rectHeight = self.view.frame.size.height;
-    int rectWidth = self.view.frame.size.width / 4;
+    CGFloat rectHeight = self.view.frame.size.height;
+    CGFloat rectWidth = self.view.frame.size.width / 4;
     
     CGRect frameLeft1 = CGRectMake(0, 0, rectWidth, rectHeight);
     CGRect frameLeft2 = CGRectMake(rectWidth, 0, rectWidth, rectHeight);
     CGRect frameLeft3 = CGRectMake(rectWidth*2 , 0, rectWidth, rectHeight);
     CGRect frameLeft4 = CGRectMake(rectWidth*3, 0, rectWidth, rectHeight);
 
+}
+// implementation of layoutDiagonalSquares
+// Calculate the width and height of the squares, the x and y of the each square
+// (4 squares arranged diagonally)
+- (void) layoutDiagonalSquares {
+    
+    
 }
 
 
@@ -92,8 +99,8 @@
     CGRect rect2;
     CGRect rect3;
     CGRect rect4;
-    int mainHeight = self.view.frame.size.height;
-    int rectHeight = mainHeight/4;
+    CGFloat mainHeight = self.view.frame.size.height;
+    CGFloat rectHeight = mainHeight/4;
     CGRectDivide(self.view.frame, &rect1, &rect2, rectHeight*3, CGRectMaxYEdge);
     CGRectDivide(rect2, &rect2, &rect3, rectHeight*2, CGRectMaxYEdge);
     CGRectDivide(rect3, &rect3, &rect4, rectHeight, CGRectMaxYEdge);
