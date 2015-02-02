@@ -46,7 +46,7 @@
 // 4 squares like a checkerboard
 - (void) layoutSquares {
     CGFloat sqLength = self.view.frame.size.width / 4;
-    // CGFloat sqH = self.redView.frame.size.height / 2;
+    // CGFloat sqH = self.redView.frame.size.height / 2; // <---- It's squares so you don't need a height
     
     NSLog (@"Height of Rectangles: %f, Width of Rectangles: %f", sqLength, sqLength); // <--- its not showing!
     
@@ -92,8 +92,16 @@
 // Calculate the width and height of the squares, the x and y of the each square
 // (4 squares arranged diagonally)
 - (void) layoutDiagonalSquares {
+    CGFloat sqLength = self.view.frame.size.width / 4;
+    // CGFloat sqH = self.redView.frame.size.height / 2; // <---- They are squares so you don't need a height
     
+    NSLog (@"Height of Rectangles: %f, Width of Rectangles: %f", sqLength, sqLength); // <--- its not showing!
     
+    CGRect box1 = CGRectMake(0, 0, sqLength, sqLength);
+    CGRect box2 = CGRectMake(sqLength, sqLength, sqLength, sqLength);
+    CGRect box3 = CGRectMake(sqLength*2, sqLength*2, sqLength, sqLength);
+    CGRect box4 = CGRectMake(sqLength*3, sqLength*3, sqLength, sqLength);
+
 }
 
 
