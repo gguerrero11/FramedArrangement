@@ -34,7 +34,6 @@
     self.yellowView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.yellowView];
 
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,13 +45,15 @@
 // Calculate the width and height of the squares, the x of the second column and y of the second row
 // 4 squares like a checkerboard
 - (void) layoutSquares {
-    CGFloat sqW = self.view.frame.size.width / 2;
-    CGFloat sqH = self.view.frame.size.height / 2;
+    CGFloat sqLength = self.view.frame.size.width / 4;
+    // CGFloat sqH = self.redView.frame.size.height / 2;
     
-    CGRect checkerframeTopLeft = CGRectMake(0, 0, sqW, sqH);
-    CGRect checkerframeTopRight = CGRectMake(sqW, 0, sqW, sqH);
-    CGRect checkerframeBottomLeft = CGRectMake(0, sqH, sqW, sqH);
-    CGRect checkerframeBottomRight = CGRectMake(sqW, sqH, sqW, sqH);
+    NSLog (@"Height of Rectangles: %f, Width of Rectangles: %f", sqLength, sqLength); // <--- its not showing!
+    
+    CGRect checkerframeTopLeft = CGRectMake(0, 0, sqLength, sqLength);
+    CGRect checkerframeTopRight = CGRectMake(sqLength, 0, sqLength, sqLength);
+    CGRect checkerframeBottomLeft = CGRectMake(0, sqLength, sqLength, sqLength);
+    CGRect checkerframeBottomRight = CGRectMake(sqLength, sqLength, sqLength, sqLength);
 }
 
 // implementation of layoutHorizontalRectangles
@@ -63,15 +64,15 @@
     CGFloat rectHeight = self.view.frame.size.height / 4;
     CGFloat rectWidth = self.view.frame.size.width;
     
-    NSLog (@"Height of Rectangles: %f, Width of Rectangles: %f", rectHeight, rectWidth);
+    NSLog (@"Height of Rectangles: %f, Width of Rectangles: %f", rectHeight, rectWidth); // <--- its not showing!
     
     CGRect frameTop1 = CGRectMake(0, 0, rectWidth, rectHeight);
     CGRect frameTop2 = CGRectMake(0, rectHeight, rectWidth, rectHeight);
     CGRect frameTop3 = CGRectMake(0, rectHeight*2, rectWidth, rectHeight);
     CGRect frameTop4 = CGRectMake(0, rectHeight*3, rectWidth, rectHeight);
+    
 
 }
-
 
 // implementation of layout
 // Calculate the width and height of the rectangles, and the x of each column
@@ -95,21 +96,6 @@
     
 }
 
-
-/*
-- (void)lemsStacks {
-    CGRect rect1;
-    CGRect rect2;
-    CGRect rect3;
-    CGRect rect4;
-    CGFloat mainHeight = self.view.frame.size.height;
-    CGFloat rectHeight = mainHeight/4;
-    CGRectDivide(self.view.frame, &rect1, &rect2, rectHeight*3, CGRectMaxYEdge);
-    CGRectDivide(rect2, &rect2, &rect3, rectHeight*2, CGRectMaxYEdge);
-    CGRectDivide(rect3, &rect3, &rect4, rectHeight, CGRectMaxYEdge);
-    
-}
-*/
 
 /*
 #pragma mark - Navigation
