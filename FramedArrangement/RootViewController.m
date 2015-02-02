@@ -8,7 +8,7 @@
 
 #import "RootViewController.h"
 
-@CGFloaterface RootViewController ()
+@interface RootViewController ()
 
 @end
 
@@ -48,6 +48,7 @@
 - (void) layoutSquares {
     CGFloat sqW = self.view.frame.size.width / 2;
     CGFloat sqH = self.view.frame.size.height / 2;
+    
     CGRect checkerframeTopLeft = CGRectMake(0, 0, sqW, sqH);
     CGRect checkerframeTopRight = CGRectMake(sqW, 0, sqW, sqH);
     CGRect checkerframeBottomLeft = CGRectMake(0, sqH, sqW, sqH);
@@ -61,6 +62,8 @@
 
     CGFloat rectHeight = self.view.frame.size.height / 4;
     CGFloat rectWidth = self.view.frame.size.width;
+    
+    NSLog (@"Height of Rectangles: %f, Width of Rectangles: %f", rectHeight, rectWidth);
     
     CGRect frameTop1 = CGRectMake(0, 0, rectWidth, rectHeight);
     CGRect frameTop2 = CGRectMake(0, rectHeight, rectWidth, rectHeight);
