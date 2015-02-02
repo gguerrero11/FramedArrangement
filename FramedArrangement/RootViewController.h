@@ -18,7 +18,13 @@
 @property (nonatomic) UIView *blueView;
 @property (nonatomic) UIView *yellowView;
 
+// Add a method called layoutSquares
 - (void) layoutSquares;
 
+// Add a method called layoutHorizontalRectangles
+- (void) layoutHorizontalRectangles;
+
+// Add a method called layoutVerticalRectangles
+- (void) layoutVerticalRectangles;
 
 @end
