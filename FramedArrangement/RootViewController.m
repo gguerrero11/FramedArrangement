@@ -33,7 +33,11 @@
     self.yellowView = [UIView new];
     self.yellowView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.yellowView];
-
+    
+    [self layoutSquares];
+    [self layoutHorizontalRectangles];
+    //[self layoutVerticalRectangles];
+    //[self layoutDiagonalSquares];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +58,11 @@
     CGRect checkerframeTopRight = CGRectMake(sqLength, 0, sqLength, sqLength);
     CGRect checkerframeBottomLeft = CGRectMake(0, sqLength, sqLength, sqLength);
     CGRect checkerframeBottomRight = CGRectMake(sqLength, sqLength, sqLength, sqLength);
+    
+    self.redView.frame = checkerframeTopLeft;
+    self.blueView.frame = checkerframeTopRight;
+    self.greenView.frame = checkerframeBottomLeft;
+    self.yellowView.frame = checkerframeBottomRight;
 }
 
 // implementation of layoutHorizontalRectangles
@@ -71,6 +80,10 @@
     CGRect frameTop3 = CGRectMake(0, rectHeight*2, rectWidth, rectHeight);
     CGRect frameTop4 = CGRectMake(0, rectHeight*3, rectWidth, rectHeight);
     
+    self.redView.frame = frameTop1;
+    self.blueView.frame = frameTop2;
+    self.greenView.frame = frameTop3;
+    self.yellowView.frame = frameTop4;
 
 }
 
@@ -87,6 +100,11 @@
     CGRect frameLeft3 = CGRectMake(rectWidth*2 , 0, rectWidth, rectHeight);
     CGRect frameLeft4 = CGRectMake(rectWidth*3, 0, rectWidth, rectHeight);
 
+    self.redView.frame = frameLeft1,
+    self.blueView.frame = frameLeft2;
+    self.greenView.frame = frameLeft3;
+    self.yellowView.frame = frameLeft4;
+
 }
 // implementation of layoutDiagonalSquares
 // Calculate the width and height of the squares, the x and y of the each square
@@ -101,6 +119,12 @@
     CGRect box2 = CGRectMake(sqLength, sqLength, sqLength, sqLength);
     CGRect box3 = CGRectMake(sqLength*2, sqLength*2, sqLength, sqLength);
     CGRect box4 = CGRectMake(sqLength*3, sqLength*3, sqLength, sqLength);
+
+    
+    self.redView.frame = box1;
+    self.blueView.frame = box2;
+    self.greenView.frame = box3;
+    self.yellowView.frame = box4;
 
 }
 
